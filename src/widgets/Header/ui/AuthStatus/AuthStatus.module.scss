@@ -1,0 +1,38 @@
+@import "@/shared/styles/media.scss";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
+  margin-left: auto;
+  border-radius: 6px;
+  border: 1px solid var(--gray3);
+
+  @include largeMobile {
+    display: none;
+  }
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: var(--gray2);
+  color: var(--white);
+}
+
+
+.authInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.authStatus {
+  color: var(--gray1);
+}

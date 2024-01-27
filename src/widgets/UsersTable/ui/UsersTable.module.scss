@@ -1,0 +1,122 @@
+@import '@/shared/styles/media.scss';
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background: var(--gray4);
+  border-radius: 18px;
+  overflow-y: hidden;
+
+  & > * {
+    width: 100%;
+  }
+
+  @include tablet {
+    padding-bottom: 34px;
+  }
+
+  @include mobile {
+    border-radius: 0;
+    padding-bottom: 51px;
+  }
+}
+
+.header {
+  border-bottom: 1px solid var(--gray3);
+  padding: 24px 34px;
+
+  @include tablet {
+    padding: 24px;
+  }
+
+  @include mobile {
+    padding: 18px 16px;
+  }
+}
+
+.tableContainer {
+  width: 100%;
+  height: 100%;
+  padding: 0 34px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  @include tablet {
+    padding: 0 24px;
+  }
+
+  @include mobile {
+    padding: 0 16px;
+  }
+}
+
+.tokens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+
+  & > svg {
+    color: var(--gray1);
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  & > svg {
+    color: var(--primary);
+  }
+}
+
+.headerItem {
+  color: var(--gray1);
+}
+
+.bodyItem {
+  color: var(--white);
+  white-space: pre-line;
+}
+
+.writeOff {
+  color: var(--red);
+
+  &:before {
+    content: '-';
+  }
+
+  &:after {
+    content: ' BTKN';
+  }
+}
+
+.replenish {
+  color: var(--green);
+
+  &:before {
+    content: '+';
+  }
+
+  &:after {
+    content: ' BTKN';
+  }
+}
+
+.spinner {
+  margin: auto;
+}
+
+.ascendingIcon {
+  transform: rotateZ(-180deg);
+}

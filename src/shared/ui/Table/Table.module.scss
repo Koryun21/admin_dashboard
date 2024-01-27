@@ -1,0 +1,36 @@
+@import "@/shared/styles/media";
+
+.container {
+  width: 100%;
+  overflow-x: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+
+.thead {
+  background: var(--black);
+}
+
+.th {
+  padding: 14px 20px;
+}
+
+.tr {
+  cursor: pointer;
+}
+
+.td {
+  height: 64px;
+  padding: 0 20px;
+  text-align: center;
+  border-bottom: 1px solid var(--gray3);
+  white-space: nowrap;
+}

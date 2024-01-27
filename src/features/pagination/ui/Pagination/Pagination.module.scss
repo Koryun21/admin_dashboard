@@ -1,0 +1,52 @@
+@import '@/shared/styles/media';
+
+.container {
+  padding: 24px 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+  @include tablet {
+    padding-bottom: 34px;
+  }
+
+  @include mobile {
+    padding-bottom: 51px;
+  }
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+
+  & > li:nth-child(1){
+    transform: rotateZ(90deg);
+  }
+
+  & > li:last-child{
+    transform: rotateZ(-90deg);
+  }
+}
+
+.item {
+  padding: 6px 14px;
+  list-style-type: none;
+  border-radius: 8px;
+  color: var(--white);
+  cursor: pointer;
+
+  &.disabled {
+    pointer-events: none;
+  }
+
+  &:hover:not(.active) {
+    background: var(--gray2);
+  }
+
+  &.active {
+    background: var(--primary);
+  }
+}

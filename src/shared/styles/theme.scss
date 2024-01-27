@@ -1,0 +1,31 @@
+$darkTheme: (
+  "black": #0E0C15,
+  'white': #FFFFFF,
+  'primary': #1C64F2,
+  'primary1': #1c64f233,
+  'primary-light': #4785FF,
+  'strong': #073CA4,
+  'strong-down': #0E3176,
+  'gray1': #616D8D,
+  'gray2': #313E62,
+  'gray3': #222B44,
+  'gray4': #121825,
+  'gray5': #374151,
+  'gray6': #374151,
+  'critic': #374151,
+  'green': #1ABB34,
+  'red': #FE4242,
+);
+
+@function HexToRGB($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+.theme {
+  @if $darkTheme {
+    @each $key, $value in $darkTheme {
+      --#{$key}: #{$value};
+      --#{$key}-rgb: #{HexToRGB($value)};
+    }
+  }
+}

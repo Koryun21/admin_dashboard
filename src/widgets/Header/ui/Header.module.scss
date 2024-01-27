@@ -1,0 +1,26 @@
+@import "@/shared/styles/media.scss";
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 44px;
+  padding: 16px 24px;
+  background: var(--gray4);
+  border-radius: 18px;
+
+  @include tablet {
+    padding: 14px 18px;;
+  }
+
+  @include largeMobile {
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  @include mobile {
+    margin: 0 16px;
+    padding: 10px 16px;
+    border-radius: 10px;
+  }
+}

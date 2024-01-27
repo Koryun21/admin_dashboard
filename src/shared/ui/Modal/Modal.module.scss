@@ -1,0 +1,28 @@
+.container {
+  display: none;
+}
+
+.isOpen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(var(--black-rgb), .6);
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & > svg {
+    cursor: pointer;
+    color: var(--white);
+  }
+}
